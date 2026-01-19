@@ -1,72 +1,87 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword,  } from 'firebase/auth';
-import { auth } from './email';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { auth } from './firebase.cofig';
 import { Link } from 'react-router';
-import { sendEmailVerification } from 'firebase/auth';
-
+import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
-  let [error ,seterror] =useState('')
-    let [sucsess ,setsucsess] =useState('')
-    let [showPass ,setshowPass] =useState('')
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  const [showPass, setShowPass] = useState(false);
 
-    let handleSubmit = (e) =>{
-          e.preventDefault();
-          let email = e.target.email.value;
-          let password =e.target.pass.value;
-        console.log("submit", email ,password)
-        let carecter =/^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
-       if(!carecter.test(password)){
-        seterror('must be 6')
-        return;
-       }
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        setsucsess(false)
-        seterror('')
-        createUserWithEmailAndPassword(auth ,email ,password)
-        .then(result => {
-            console.log(result.user)
-            setsucsess(true)
-            e.target.reset();
-            sendEmailVerification(result.user)
-            .then(()=>{
-              alert('verify your email')
-            })
-        })
-        .catch(error =>{
-            console.log('error hapen' ,error.message)
-            seterror(error.message)
-        })
+    const email = e.target.email.value;
+    const password = e.target.pass.value;
+
+    const pattern = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
+
+    if (!pattern.test(password)) {
+      setError('Password must be at least 6 characters and contain letters & numbers');
+      return;
     }
-   let handlePass = (e) =>{
-    e.preventDefault()
-      setshowPass(!showPass)
-    }
-    return (
-        <div>
-            <div className="hero bg-gradient-to-r from-blue-200 via-blue-500 to white shadow-sm min-h-screen">
-  <div className="hero-content flex-col ">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl text-center font-bold">Registretion Now!</h1>
-      
-    </div>
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <div className="card-body">
-        <fieldset className="fieldset">
-          <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
-          <label className="label">Password</label>
-          <input type="password" className="input" placeholder="Password" />
-         
-          <button className="btn btn-neutral mt-4">Register</button>
-        </fieldset>
-        
+
+    setError('');
+    setSuccess(false);
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(result => {
+        setSuccess(true);
+        e.target.reset();
+
+        sendEmailVerification(result.user).then(() => {
+          alert('Please verify your email');
+        });
+      })
+      .catch(err => {
+        setError(err.message);
+      });
+  };
+
+  return (
+    <div className="hero bg-gradient-to-r from-blue-200 via-blue-500 to-white min-h-screen">
+      <div className="hero-content flex-col">
+        <h1 className="text-4xl font-bold mb-4">Registration Now!</h1>
+
+        <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+          <div className="card-body">
+            <form onSubmit={handleSubmit}>
+              <label className="label">Email</label>
+              <input type="email" name="email" className="input" required />
+
+              <label className="label mt-2">Password</label>
+              <div className="flex gap-2">
+                <input
+                  type={showPass ? "text" : "password"}
+                  name="pass"
+                  className="input flex-1"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPass(!showPass)}
+                >
+                  {showPass ? "Hide" : "Show"}
+                </button>
+              </div>
+
+              {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+              {success && <p className="text-green-500 text-sm mt-2">Registration successful!</p>}
+
+              <button className="btn btn-neutral mt-4 w-full">
+                Register
+              </button>
+            </form>
+            <button className="btn btn-wide">Login with google <FaGoogle></FaGoogle></button>
+            <p className="text-sm mt-3">
+              Already have an account? <Link className="link link-primary" to="/login">Login</Link>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
- </div>
-        </div>
-    );
+  );
 };
 
 export default Register;
