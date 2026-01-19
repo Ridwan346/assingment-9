@@ -9,6 +9,8 @@ import Home from './Home/Home.jsx';
 import Carddetail from './Home/Carddetail.jsx';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Login from './LogIn/Login.jsx';
+import Register from './LogIn/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
           return fetch('/game.json')
          .then(res => res.json());
           }
+      },
+      {
+        path:'login',
+        Component:Login
+      },
+      {
+        path:'register',
+        Component: Register
       }
     ]
   },

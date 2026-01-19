@@ -86,5 +86,17 @@
     "longDescription": "Asphalt 9: Legends delivers an adrenaline-filled racing experience with real-world licensed cars and visually stunning tracks. The game focuses on arcade-style racing with nitro boosts, sharp turns, and cinematic visuals. Players can compete in career mode, multiplayer races, and limited-time events. Regular updates and new cars keep the racing experience fresh and exciting.",
     "ratings": "4.4",
     "developer": "Gameloft"
-  }
+  },
+  {
+  "id": "9",
+  "title": "Stardew Valley",
+  "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCu4ON6OJcZoxlamYQmWYyz4frn__T4iuhLw&s",
+  "category": "Simulation",
+  "downloadLink": "https://www.stardewvalley.net/",
+  "description": "Stardew Valley is a farming simulation game where players grow crops, raise animals, and build relationships.",
+  "longDescription": "Stardew Valley is a popular indie farming simulation game that combines farming, crafting, and role-playing elements. Players inherit a run-down farm and work to restore it by planting crops, raising livestock, mining for resources, fishing, and interacting with townsfolk. The game offers a relaxing experience with seasonal events, quests, and multiplayer options, making it a beloved title for casual and dedicated gamers alike.",
+  "ratings": "4.7",
+  "developer": "ConcernedApe"
+}
+
 ]

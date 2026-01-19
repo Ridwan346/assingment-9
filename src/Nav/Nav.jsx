@@ -28,21 +28,21 @@ const Nav = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><NavLink to={'/'}><a>Home</a></NavLink></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>Join us</summary>
           <ul className="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><NavLink to={'/register'}>Registretion Now</NavLink></li>
+            <li><NavLink to={'/login'}>Log In</NavLink></li>
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <li><NavLink to={'https://www.youtube.com/watch?v=KurHR-5VmIw'}><a>Watch video</a></NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <NavLink to={'/login'}><a className="btn">Log in</a></NavLink>
   </div>
 </div>
     );
