@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": " Battle Ground: PUBG",
+    "coverPhoto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/578080/841ea38bc58cabb70aef65365cf50bc2d79329d9/header.jpg?t=1764817633",
+    "category": "FPS",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "longDescription": "PUBG Mobile is one of the most popular battle royale games in the world, offering intense multiplayer combat where up to 100 players parachute onto an island and fight to be the last one standing. The game focuses heavily on realism, tactical gameplay, weapon management, and teamwork. Players can choose different maps, modes, and playstyles, making each match feel unique. Regular updates, esports tournaments, and seasonal content keep the gameplay fresh and competitive.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty Mobile",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUn7PBlrfu9M_nHs2WdkBIcXk69vGuTtkUQw&s",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty Mobile delivers classic multiplayer, battle royale modes, and intense FPS action on mobile devices.",
+    "longDescription": "Call of Duty Mobile brings the iconic COD experience to mobile with high-quality graphics, fast-paced gunplay, and a variety of multiplayer modes. Players can enjoy classic maps, ranked matches, zombies mode, and battle royale gameplay. The game supports customization of weapons, loadouts, and characters, allowing players to fine-tune their combat style. Frequent updates and seasonal events make it one of the most engaging mobile shooters available.",
+    "ratings": "4.6",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Free Fire",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaMylBPUmp6XNB7hdNJHqW9iu3x9V66FK5pw&sp",
+    "category": "Battle Royale",
+    "downloadLink": "https://ff.garena.com/",
+    "description": "Free Fire is a survival shooter game where players battle in quick matches with unique characters and abilities.",
+    "longDescription": "Free Fire is designed for fast and action-packed matches that last only a few minutes, making it perfect for mobile gaming. The game features a wide range of characters, each with unique skills that add strategic depth to gameplay. With optimized performance for low-end devices, Free Fire has become extremely popular in many regions. Frequent collaborations, events, and character updates keep players engaged over time.",
+    "ratings": "4.3",
+    "developer": "Garena"
+  },
+  {
+    "id": "4",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQseU_9P0CnSh4lQSqeuDF4HM07oApg8bID2g&s",
+    "category": "RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact is an open-world action RPG featuring elemental combat, exploration, and a rich storyline.",
+    "longDescription": "Genshin Impact offers a vast open-world filled with stunning landscapes, deep lore, and engaging characters. Players explore the world of Teyvat, master elemental combat systems, and build teams with unique abilities. The game combines action RPG mechanics with gacha-based character collection. Regular story expansions, events, and new regions make Genshin Impact a continuously evolving experience.",
+    "ratings": "4.7",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "5",
+    "title": "Clash of Clans",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdit_c0PU7QwWOPKC1kc0kIA0My8cxajEeBw&s",
+    "category": "Strategy",
+    "downloadLink": "https://supercell.com/en/games/clashofclans/",
+    "description": "Clash of Clans is a strategy game where players build villages, train armies, and battle other players worldwide.",
+    "longDescription": "Clash of Clans is a highly strategic base-building game where players manage resources, upgrade defenses, and create powerful armies. Players can join clans, participate in clan wars, and compete in global events. The game rewards long-term planning, teamwork, and tactical decision-making. With years of updates and a massive community, Clash of Clans remains one of the most successful mobile strategy games ever.",
+    "ratings": "4.5",
+    "developer": "Supercell"
+  },
+  {
+    "id": "6",
+    "title": "Minecraft",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2aT9TaLcZ2ZPD-P0yxvFrvrllxySieCDoMIS_OIAF_23HCRPubMhKkQKkRNzgXVGOXLGUhkeArQ9wg9NbyAOANhdWQukJogTY17-viA&s=10",
+    "category": "Sandbox",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is a creative sandbox game that lets players build, explore, and survive in infinite blocky worlds.",
+    "longDescription": "Minecraft is a legendary sandbox game that encourages creativity, exploration, and problem-solving. Players can build massive structures, explore randomly generated worlds, and survive against various challenges. The game supports multiple playstyles including creative mode, survival mode, and multiplayer servers. Its modding community and educational use have made Minecraft one of the most influential games of all time.",
+    "ratings": "4.8",
+    "developer": "Mojang"
+  },
+  {
+    "id": "7",
+    "title": "Among Us",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9x0wv5YeLA60kIGLYM_kDCI3SrrWmrCPciA&s",
+    "category": "Party",
+    "downloadLink": "https://www.innersloth.com/games/among-us/",
+    "description": "Among Us is a multiplayer party game of teamwork and betrayal set in space-themed environments.",
+    "longDescription": "Among Us focuses on social interaction, communication, and deception. Players work together to complete tasks while impostors secretly sabotage and eliminate others. The game gained massive popularity due to its simple mechanics and intense social dynamics. It is best enjoyed with friends and has become a cultural phenomenon in online multiplayer gaming.",
+    "ratings": "4.2",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "8",
+    "title": "Asphalt 9: Legends",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTox_Vla3kztkMwyIhJkmuGiNSSscv6h9JD9g&s",
+    "category": "Racing",
+    "downloadLink": "https://asphaltlegends.com/",
+    "description": "Asphalt 9: Legends is a high-speed racing game featuring real cars, stunning graphics, and arcade-style gameplay.",
+    "longDescription": "Asphalt 9: Legends delivers an adrenaline-filled racing experience with real-world licensed cars and visually stunning tracks. The game focuses on arcade-style racing with nitro boosts, sharp turns, and cinematic visuals. Players can compete in career mode, multiplayer races, and limited-time events. Regular updates and new cars keep the racing experience fresh and exciting.",
+    "ratings": "4.4",
+    "developer": "Gameloft"
+  }
+]

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default, dark --prefersdark;
+  themes: light --default;
+ }
+body{
+  background: linear-gradient(
+    to right,
+      #ffffff ,
+    #3b82f6,   /* blue-500 */
+       /* white */
+  );
+}
