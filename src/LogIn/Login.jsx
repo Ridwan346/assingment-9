@@ -47,7 +47,7 @@ const Login = () => {
           <input name='email' type="email" className="input" placeholder="Email" required  />
           <label className="label">Password</label>
           <input name='pass' type="password" className="input" placeholder="Password" required  />
-          <div><a className="link link-hover">Forgot password?</a></div>
+          <div><NavLink to={'/forget'}><a className="link link-hover">Forgot password?</a></NavLink></div>
           {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
               {success && <p className="text-green-500 text-sm mt-2">{success}</p>}
           <button className="btn btn-neutral mt-4">Login</button>

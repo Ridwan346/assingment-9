@@ -5,7 +5,8 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+   sendPasswordResetEmail
 } from "firebase/auth";
 import { auth } from "../LogIn/firebase.cofig";
 
@@ -39,6 +40,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   };
+   //reset password
+   const resetPassword = (email) => {
+  setLoading(true);
+  return sendPasswordResetEmail(auth, email);
+};
 
   // Observer
   useEffect(() => {
@@ -56,7 +62,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     loginUser,
     googleLogin,
-    logOut
+    logOut,
+    resetPassword
   };
 
   return (

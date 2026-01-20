@@ -1,7 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { useContext } from 'react';
+import { Navigate, NavLink } from 'react-router';
+import {AuthContext} from '../LogIn/Api'
 
 const Nav = () => {
+  const { user, logOut, } = useContext(AuthContext);
+   const handleLogout = () => {
+    logOut()
+      .then(() => {
+        //Navigate("/login"); // redirect after logout
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+  };
     return (
         <div className="navbar  bg-gradient-to-r from-blue-200 via-blue-500 to white shadow-sm">
        
@@ -42,7 +53,14 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <NavLink to={'/login'}><a className="btn">Log in</a></NavLink>
+    {user ? (
+        <button onClick={handleLogout}>
+          Logout
+        </button>
+      ) : (
+        <NavLink to={'/login'}><a className="btn">Log in</a></NavLink>
+      )}
+    
   </div>
 </div>
     );

@@ -12,6 +12,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Login from './LogIn/Login.jsx';
 import Register from './LogIn/Register.jsx';
 import AuthProvider from './LogIn/Api.jsx';
+import ForgetPassword from './LogIn/ForgetPass.jsx';
+import PrivateRoute from './LogIn/Privet.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,11 +29,12 @@ const router = createBrowserRouter([
           }
       },{
         path:'card/:id',
-        Component:Carddetail,
-        loader: () => {
-          return fetch('/game.json')
-         .then(res => res.json());
-          }
+         loader: () => fetch('/game.json'),
+        element: (
+          <PrivateRoute>
+            <Carddetail />
+          </PrivateRoute>
+        ),
       },
       {
         path:'login',
@@ -40,6 +43,10 @@ const router = createBrowserRouter([
       {
         path:'register',
         Component: Register
+      },
+      {
+        path:"forget",
+        Component:ForgetPassword
       }
     ]
   },
