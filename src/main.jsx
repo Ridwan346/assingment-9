@@ -18,6 +18,7 @@ import Profile from './Nav/Profile.jsx';
 import NotFound from './Root/Notfound.jsx';
 import Settings from './Nav/Settings.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
             <Settings />
           </PrivateRoute>
         )
-      }
+      },
     ]
   },
   {

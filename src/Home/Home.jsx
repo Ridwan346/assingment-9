@@ -12,7 +12,7 @@ const Home = () => {
            </div>
            <div className='grid grid-cols-3 m-auto'>
             {
-            data.map(res =><HOmeCard key={data?.id} data={res}></HOmeCard>)
+            data.map(res =><HOmeCard key={res?.id} data={res}></HOmeCard>)
            }
            </div>
            <div className='flex justify-between items-center p-2.5 mt-2 border rounded-xl bg-gradient-to-r from-blue-200 via-blue-500 to white shadow-sm'>
