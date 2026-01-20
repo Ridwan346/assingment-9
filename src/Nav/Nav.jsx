@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, NavLink } from 'react-router';
 import {AuthContext} from '../LogIn/Api'
+import { IoMdSettings } from "react-icons/io";
 
 const Nav = () => {
   const { user, logOut, } = useContext(AuthContext);
@@ -50,7 +51,9 @@ const Nav = () => {
         </details>
       </li>
       <li><NavLink to={'/profile'}><a>Profile</a></NavLink></li>
+      <li><NavLink to={'/settings'}><a>settings</a></NavLink></li>
     </ul>
+     
   </div>
   <div className="navbar-end">
     {user ? (

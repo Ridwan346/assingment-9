@@ -16,6 +16,7 @@ import ForgetPassword from './LogIn/ForgetPass.jsx';
 import PrivateRoute from './LogIn/Privet.jsx';
 import Profile from './Nav/Profile.jsx';
 import NotFound from './Root/Notfound.jsx';
+import Settings from './Nav/Settings.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,14 @@ const router = createBrowserRouter([
         element:(
           <PrivateRoute>
             <Profile></Profile>
+          </PrivateRoute>
+        )
+      },
+       {
+        path: 'settings',  // ✅ New Route
+        element: (
+          <PrivateRoute>
+            <Settings />
           </PrivateRoute>
         )
       }
