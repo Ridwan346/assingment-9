@@ -6,7 +6,8 @@ import {
   signInWithPopup,
   signOut,
   onAuthStateChanged,
-   sendPasswordResetEmail
+  sendPasswordResetEmail,
+   updateProfile
 } from "firebase/auth";
 import { auth } from "../LogIn/firebase.cofig";
 
@@ -34,6 +35,25 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
+  //update profile
+  const updateUserProfile = (name, photo) => {
+    if (!auth.currentUser) return Promise.reject("No user logged in");
+    setLoading(true);
+
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    }).then(() => {
+      // Update local user state immediately
+      setUser({
+        ...auth.currentUser,
+        displayName: name,
+        photoURL: photo,
+      });
+      setLoading(false);
+    });
+  };
+
 
   // Logout
   const logOut = () => {
@@ -63,7 +83,8 @@ const AuthProvider = ({ children }) => {
     loginUser,
     googleLogin,
     logOut,
-    resetPassword
+    resetPassword,
+    updateUserProfile
   };
 
   return (

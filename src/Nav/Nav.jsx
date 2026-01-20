@@ -49,7 +49,7 @@ const Nav = () => {
           </ul>
         </details>
       </li>
-      <li><NavLink to={'https://www.youtube.com/watch?v=KurHR-5VmIw'}><a>Watch video</a></NavLink></li>
+      <li><NavLink to={'/profile'}><a>Profile</a></NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">

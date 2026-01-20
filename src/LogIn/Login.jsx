@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { NavLink } from 'react-router';
+import { NavLink, useLocation, useNavigate } from 'react-router';
 import {AuthContext} from '../LogIn/Api'
 import { FaGoogle } from 'react-icons/fa';
 
@@ -7,11 +7,14 @@ const Login = () => {
   const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
      const { googleLogin, loginUser } = useContext(AuthContext);
+     const navigate = useNavigate();
+     const location = useLocation();
+      const from = location.state?.from?.pathname || "/";
   let Handlegoogle = () =>{
       googleLogin()
       .then(result => {
         setSuccess(`Logged in as ${result.user.email}`);
-        setError('');
+        navigate(from, { replace: true }); 
       })
       .catch(err => {
         setError(err.message);

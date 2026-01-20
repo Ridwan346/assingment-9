@@ -14,6 +14,7 @@ import Register from './LogIn/Register.jsx';
 import AuthProvider from './LogIn/Api.jsx';
 import ForgetPassword from './LogIn/ForgetPass.jsx';
 import PrivateRoute from './LogIn/Privet.jsx';
+import Profile from './Nav/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,14 @@ const router = createBrowserRouter([
       {
         path:"forget",
         Component:ForgetPassword
+      },
+      {
+        path:'profile',
+        element:(
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        )
       }
     ]
   },
