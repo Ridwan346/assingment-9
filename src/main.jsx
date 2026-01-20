@@ -15,6 +15,7 @@ import AuthProvider from './LogIn/Api.jsx';
 import ForgetPassword from './LogIn/ForgetPass.jsx';
 import PrivateRoute from './LogIn/Privet.jsx';
 import Profile from './Nav/Profile.jsx';
+import NotFound from './Root/Notfound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:"*",
+    Component:NotFound
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
